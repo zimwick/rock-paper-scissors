@@ -69,20 +69,24 @@ const playRound = function (humanChoice, computerChoice) {
   }
 };
 
-const updateScore = function () {
-  const result = playRound(getHumanChoice(), getComputerChoice());
-  if (result === "player") {
-    humanScore += 1;
-  } else if (result === "computer") {
-    computerScore += 1;
-  }
-
-  if (humanScore > computerScore) {
-    console.log("You win!");
-  } else if (computerScore > humanScore) {
-    console.log("You lose!");
+const updateScore = function (roundWinner) {
+  if (currentRound < maxRounds - 1) {
+    if (roundWinner === "player") {
+      humanScore += 1;
+      playerScoreDisplay.textContent = humanScore;
+    } else if (roundWinner === "computer") {
+      computerScore += 1;
+      computerScoreDisplay.textContent = computerScore;
+    }
+    currentRound += 1;
   } else {
-    console.log("its a tie!");
+    if (humanScore > computerScore) {
+      console.log("You win!");
+    } else if (computerScore > humanScore) {
+      console.log("You lose!");
+    } else {
+      console.log("its a tie!");
+    }
   }
 };
 
@@ -96,18 +100,24 @@ const computerScoreDisplay = document.querySelector(".computer-score");
 
 let humanScore = 0;
 let computerScore = 0;
+let currentRound = 0;
+
+let maxRounds = 5;
 
 rock.addEventListener("click", (e) => {
   const computerChoice = getComputerChoice();
-  playRound("r", computerChoice);
+  const roundWinner = playRound("r", computerChoice);
+  updateScore(roundWinner);
 });
 
 scissors.addEventListener("click", (e) => {
   const computerChoice = getComputerChoice();
-  playRound("s", computerChoice);
+  const roundWinner = playRound("s", computerChoice);
+  updateScore(roundWinner);
 });
 
 paper.addEventListener("click", (e) => {
   const computerChoice = getComputerChoice();
-  playRound("p", computerChoice);
+  const roundWinner = playRound("p", computerChoice);
+  updateScore(roundWinner);
 });
