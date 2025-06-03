@@ -13,11 +13,6 @@ const getComputerChoice = function () {
   }
 };
 
-const getHumanChoice = function () {
-  const choice = prompt("Type (s)cissors, (p)aper, or (r)ock");
-  return choice;
-};
-
 const playRound = function (humanChoice, computerChoice) {
   const humanChoiceLower = humanChoice.toLowerCase();
 
@@ -64,5 +59,9 @@ const playGame = function () {
     console.log("its a tie!");
   }
 };
+
+const rock = document.querySelector("rock");
+const scissors = document.querySelector("scissors");
+const paper = document.querySelector("paper");
 
 playGame();

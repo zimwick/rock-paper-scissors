@@ -3,10 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <h1>Lets play rock paper scissors</h1>
+      <div class="choice-container">
+        <p>Choose One</p>
+        <div class="choices">
+          <button class="rock">
+            <img src="./imgs/Rock.png" alt="Cartoon rendering of rock" />
+          </button>
+          <button class="paper">
+            <img src="./imgs/Paper.png" alt="Cartoon rendering of paper" />
+          </button>
+          <button class="scissors">
+            <img
+              src="./imgs/Scissors.png"
+              alt="Cartoon rendering of scissors"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="choices-container">
+        <div class="player-choice-container">
+          <p>Player Choice</p>
+          <img class="player-image" src="./imgs/Rock.png" />
+        </div>
+
+        <div class="computer-choice-container">
+          <p>Computer Choice</p>
+          <img class="computer-image" src="./imgs/Scissors.png" />
+        </div>
+      </div>
+
+      <div class="score-container">
+        <p>Your Score: <span class="player-score">0</span></p>
+        <p>Computer Score: <span class="computer-score">0</span></p>
+      </div>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
