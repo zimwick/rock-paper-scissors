@@ -24,7 +24,9 @@ h1 {
 
 .choice-container {
   background-color: #a87e6d;
-  margin: 0 450px;
+  width: 900px;
+  margin: 0 auto;
+  margin: 0 auto;
   margin-bottom: 50px;
   border-radius: 30px;
   padding: 25px;
@@ -61,7 +63,7 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 60px;
   margin-bottom: 25px;
 }
 
@@ -98,6 +100,7 @@ button:active {
   color: #f6f0e6;
   font-size: 30px;
   background-color: #675344;
-  margin: 0 800px;
+  width: 300px;
+  margin: 0 auto;
   border-radius: 30px;
 }
