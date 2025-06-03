@@ -6,13 +6,10 @@ const getComputerChoice = function () {
   switch (computerChoice) {
     case 0:
       return "s";
-      break;
     case 1:
       return "p";
-      break;
     case 2:
       return "r";
-      break;
   }
 };
 
@@ -51,13 +48,12 @@ const playRound = function (humanChoice, computerChoice) {
 const playGame = function () {
   let humanScore = 0;
   let computerScore = 0;
-  for (let round = 0; round < 5; round++) {
-    const result = playRound(getHumanChoice(), getComputerChoice());
-    if (result === "player") {
-      humanScore += 1;
-    } else if (result === "computer") {
-      computerScore += 1;
-    }
+
+  const result = playRound(getHumanChoice(), getComputerChoice());
+  if (result === "player") {
+    humanScore += 1;
+  } else if (result === "computer") {
+    computerScore += 1;
   }
 
   if (humanScore > computerScore) {
