@@ -18,21 +18,20 @@ img {
 h1 {
   font-family: "Barriecito", sans-serif;
   font-size: 60px;
-  margin: 40px;
+  margin: 20px;
   color: #2e2e21;
 }
 
 .choice-container {
   background-color: #a87e6d;
-  width: 900px;
+  width: 700px;
   margin: 0 auto;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   border-radius: 30px;
   padding: 25px;
 }
 
-.choice-container p {
+.choose-text {
   font-size: 40px;
   font-weight: 700;
   color: #f6f0e6;
@@ -41,7 +40,7 @@ h1 {
 
 .choices {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -63,8 +62,8 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  margin-bottom: 25px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .player-choice-container,
@@ -75,10 +74,9 @@ button:active {
   justify-content: space-between;
   align-items: center;
   border-radius: 30px;
-  padding: 25px;
-  height: 13vw;
-  width: 13vw;
-  margin-bottom: 20px;
+  padding: 20px;
+  height: 16vw;
+  width: 16vw;
 }
 
 .player-choice-container p,
@@ -100,7 +98,21 @@ button:active {
   color: #f6f0e6;
   font-size: 30px;
   background-color: #675344;
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
   border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.play-again {
+  background-color: #f6f0e6;
+  font-size: 28px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  border: 4px solid #2e2e21;
+}
+
+.hidden {
+  display: none;
 }
